@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Maths Game</title>
+</head>
+
+<body>
+
+    <div class="container fluid wrapper">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-4">
+                <h1>Maths Game</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-primary" onclick="setAdditionGame()">Addition</button>
+            </div>
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-success" onclick="setSubtractionGame()">Subtraction</button>
+            </div>
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-warning" onclick="setMultiplicationGame()">Multiplication</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Your score is: <span id="score">0</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p id="question"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="quizForm" name="answerForm" onsubmit="checkAnswer(); return false;" action="#" data-gametype="addition">
+
+                    Enter answer: <input type="number" name="answer">
+                    <input type="hidden" name="rightAnswer">
+                    <input type="submit" value="submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="game.js"></script>
+
+</body>
+
+</html>
